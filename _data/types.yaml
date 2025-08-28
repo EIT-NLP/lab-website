@@ -20,7 +20,11 @@ undergrad:
 
 programmer:
   icon: fa-solid fa-code
-  description: Programmer
+  description: 研究工程师
+
+admin:
+  icon: fa-solid fa-user-tie
+  description: 行政助理
 
 mascot:
   icon: fa-solid fa-dog

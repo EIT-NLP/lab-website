@@ -1,23 +1,206 @@
-- id: doi:10.1371/journal.pcbi.1007128
+# _data/sources.yaml - 完全手动管理论文列表
+
+# ========== 2024年重点论文 ==========
+
+- id: arxiv:2410.06765
   type: paper
-  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  date: 2020-12-4
-  image: https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&rev=2
+  featured: true
+  year: 2024
+  title: "To Preserve or To Compress: An In-Depth Study of Connector Selection in Multimodal Large Language Models"
+  authors:
+    - "**Junyan Lin**"
+    - "**Haoran Chen**" 
+    - "**Dawei Zhu**"
+    - "**Xiaoyu Shen**"
+  publisher: "arXiv preprint"
+  date: 2024-10-09
+  link: http://arxiv.org/abs/2410.06765
+  description: |
+    系统地探讨了连接器对多模态大语言模型性能的影响。我们将连接器分为保留特征型和压缩特征型两类，
+    通过统一的分类标准将任务划分为粗粒度感知、细粒度感知和推理三种类型，为MLLM架构设计提供重要指导。
+  image: images/papers/mllm-connector.jpg
   buttons:
-    - type: manubot
-      link: https://greenelab.github.io/meta-review/
     - type: source
-      text: Manuscript Source
-      link: https://github.com/greenelab/meta-review
-    - type: website
-      link: http://manubot.org/
+      link: https://github.com/EIT-NLP/Connector-Selection-for-MLLM
+      text: 代码仓库
+    - type: website  
+      link: http://arxiv.org/abs/2410.06765
+      text: arXiv论文
   tags:
-    - open science
-    - collaboration
-  repo: greenelab/meta-review
+    - 多模态学习
+    - 大语言模型
+    - 架构优化
+  repo: EIT-NLP/Connector-Selection-for-MLLM
 
-- id: doi:10.1016/j.csbj.2020.05.017
-  image: https://ars.els-cdn.com/content/image/1-s2.0-S2001037020302804-gr1.jpg
+- id: arxiv:2404.14122
+  type: paper
+  featured: true
+  year: 2024
+  title: "Fine-Tuning Large Language Models to Translate: Will a Touch of Noisy Data in Misaligned Languages Suffice?"
+  authors:
+    - "**Dawei Zhu**"
+    - "Pinzhen Chen"
+    - "Miaoran Zhang"
+    - "Barry Haddow"
+    - "**Xiaoyu Shen**"
+    - "Dietrich Klakow"
+  publisher: "arXiv preprint"
+  date: 2024-04-22
+  link: https://arxiv.org/pdf/2404.14122
+  description: |
+    重新审视多语言机器翻译成功的关键因素。研究发现，大语言模型在仅微调32对平行句子的情况下
+    就表现出了强大的翻译能力，挑战了传统对大规模数据的依赖认知。
+  image: images/papers/llm-translation.jpg
+  buttons:
+    - type: source
+      link: https://github.com/uds-lsv/mt-sft
+      text: 代码仓库
+    - type: website
+      link: https://arxiv.org/pdf/2404.14122
+      text: PDF下载
+  tags:
+    - 机器翻译
+    - 大语言模型
+    - 少样本学习
+  repo: uds-lsv/mt-sft
 
-- id: doi:10.7554/eLife.32822
-  image: https://iiif.elifesciences.org/lax:32822%2Felife-32822-fig8-v3.tif/full/863,/0/default.webp
+- id: arxiv:2410.06554
+  type: paper
+  featured: true
+  year: 2024
+  title: "The Accuracy Paradox in RLHF: When Better Reward Models Don't Yield Better Language Models"
+  authors:
+    - "**Yanjun Chen**"
+    - "**Dawei Zhu**"
+    - "Yirong Sun"
+    - "Xinghao Chen" 
+    - "Wei Zhang"
+    - "**Xiaoyu Shen**"
+  publisher: "arXiv preprint"
+  date: 2024-10-09
+  link: https://arxiv.org/abs/2410.06554
+  description: |
+    揭示了人类反馈强化学习中的准确性悖论：使用中等准确率奖励模型训练的语言模型
+    表现竟然优于使用高准确率奖励模型的语言模型，为RLHF研究开辟了新方向。
+  image: images/citations/2410_06554.png
+  buttons:
+    - type: source
+      link: https://github.com/EIT-NLP/AccuracyParadox-RLHF
+      text: 代码仓库
+    - type: website
+      link: https://arxiv.org/abs/2410.06554
+      text: arXiv论文
+  tags:
+    - 强化学习
+    - 人类反馈
+    - 奖励模型
+  repo: EIT-NLP/AccuracyParadox-RLHF
+
+# ========== 2023年论文 ==========
+
+- id: doi:10.1000/example.2023.001
+  type: paper
+  year: 2023
+  title: "Efficient Information Retrieval with Advanced Semantic Search"
+  authors:
+    - "**研究团队成员1**"
+    - "**研究团队成员2**"
+    - "**Xiaoyu Shen**"
+  publisher: "Conference on Information Retrieval"
+  date: 2023-06-15
+  link: https://example.com/paper-link
+  description: |
+    提出了新的语义搜索框架，显著提升了信息检索的准确性和效率。
+    该方法在多个标准数据集上都取得了最优性能。
+  image: images/papers/info-search-2023.jpg
+  buttons:
+    - type: source
+      link: https://github.com/EIT-NLP/InfoSearch
+      text: 代码仓库
+  tags:
+    - 信息检索
+    - 语义搜索
+    - 深度学习
+  repo: EIT-NLP/InfoSearch
+
+# ========== 更早期论文 ==========
+
+- id: doi:10.1000/example.2022.001
+  type: paper
+  year: 2022
+  title: "Neural Language Models for Cross-lingual Understanding"
+  authors:
+    - "**Xiaoyu Shen**"
+    - "Collaborator Name"
+  publisher: "International Conference on Computational Linguistics"
+  date: 2022-10-12
+  link: https://example.com/early-paper
+  description: |
+    早期关于跨语言理解的神经语言模型研究，为后续多语言工作奠定了基础。
+  tags:
+    - 跨语言理解
+    - 神经网络
+    - 语言模型
+
+# ========== 会议论文和期刊论文分类示例 ==========
+
+- id: doi:10.1000/example.2023.002
+  type: journal
+  year: 2023
+  title: "Deep Learning Approaches for Multilingual NLP: A Comprehensive Survey"
+  authors:
+    - "**Xiaoyu Shen**"
+    - "International Collaborators"
+  publisher: "Journal of Artificial Intelligence Research"
+  date: 2023-08-20
+  link: https://example.com/journal-paper
+  description: |
+    多语言自然语言处理的深度学习方法综合性调研，涵盖了该领域的最新进展和未来趋势。
+  image: images/papers/survey-2023.jpg
+  tags:
+    - 综合调研
+    - 多语言NLP
+    - 深度学习
+  buttons:
+    - type: website
+      link: https://example.com/journal-paper
+      text: 期刊链接
+
+# ========== 预印本和工作论文 ==========
+
+- id: arxiv:2403.15000
+  type: preprint
+  year: 2024
+  title: "Towards More Efficient Training of Large Language Models"
+  authors:
+    - "**PhD Student**"
+    - "**Xiaoyu Shen**"
+  publisher: "Under Review"
+  date: 2024-03-15
+  description: |
+    正在投稿中的工作，专注于提升大语言模型训练效率的新方法。
+  tags:
+    - 模型训练
+    - 效率优化
+    - 大语言模型
+  buttons:
+    - type: source
+      link: https://github.com/EIT-NLP/Efficient-Training
+      text: 预览代码
+
+# ========== 书籍章节和其他出版物 ==========
+
+- id: doi:10.1000/example.2023.003
+  type: book
+  year: 2023
+  title: "Natural Language Processing in the Era of Large Language Models"
+  authors:
+    - "**Xiaoyu Shen**"
+  publisher: "Springer Nature"
+  date: 2023-12-01
+  description: |
+    受邀撰写的书籍章节，探讨大语言模型时代的自然语言处理技术发展。
+  tags:
+    - 书籍章节
+    - 大语言模型
+    - 技术发展

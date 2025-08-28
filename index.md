@@ -1,94 +1,35 @@
 ---
+
+title: 首页
+
+nav:
+
+ order: 1
+
+ tooltip: 主页
+
 ---
 
-# Lab Website Template
+# 宁波东方理工大学自然语言处理课题组
 
-[Lab Website Template](https://github.com/greenelab/lab-website-template) is an easy-to-use, flexible website template for [labs](https://www.greenelab.com/).
-Spend less time worrying about managing a website and citations, and more time running your lab.
-
-{%
-  include button.html
-  type="docs"
-  link="https://greene-lab.gitbook.io/lab-website-template-docs"
-%}
-{%
-  include button.html
-  type="github"
-  text="On GitHub"
-  link="greenelab/lab-website-template"
-%}
+我们是[宁波东方理工大学](https://www.eitech.edu.cn/)自然语言处理课题组（EIT-NLP）。依托的宁波东方理工大学，坐落于孕育过王阳明、黄宗羲等思想大家与屠呦呦等科学大师的宁波 —— 这座东南沿海的港口名城与历史文化之城。学校以 “服务国家发展、推动社会进步” 为使命，是一所社会力量举办、省市共同建设、国家重点支持的高起点、小而精、创新型、国际化的新型研究型大学。
 
 {% include section.html %}
 
-## Highlights
+## 新闻
 
-{% capture text %}
+{% include list.html data="citations" component="citation" filters="group: featured" %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+{% include section.html %}
 
-{%
-  include button.html
-  link="research"
-  text="See our publications"
-  icon="fa-solid fa-arrow-right"
-  flip=true
-  style="bare"
-%}
+## 关于我们
 
-{% endcapture %}
+宁波东方理工大学（Eastern Institute of Technology，EIT）以 “扎根中国、怀抱世界，承载历史、面向未来” 为办学追求，正如陈十一校长所言，致力于 “培养能解决国家重大需求和影响改变世界的一流科技人才”，力图成为 “能被世界记住的中国大学” 与 “世界高等教育的‘中国模式’”。
 
-{%
-  include feature.html
-  image="images/photo.jpg"
-  link="research"
-  title="Our Research"
-  text=text
-%}
+我们自然语言处理课题组（Natural Language Processing，NLP）的研究方向与学校这一发展内核深度契合，始终以推动变革性研究、服务前沿技术需求为核心。我们聚焦自然语言处理领域的基础突破与交叉创新，通过原创方法推进技术边界 —— 从信息检索的精准优化到多模态学习的融合创新，再到链式推理的逻辑深化，持续探索机器对人类语言的深度理解、精准生成与智能推理路径。
 
-{% capture text %}
+课题组尤为注重 “高效性与资源友好性” 的平衡：在攻坚算法性能、追求技术前沿的同时，着力通过创新降低资源消耗 —— 减少大规模人工标注依赖、提速模型训练效率、降低推理成本，最终旨在构建性能强劲且适配多元场景的模型，为国家在 AI 领域的技术应用与人才培养提供基础支撑，呼应学校 “强化基础研究、聚焦前沿交叉” 的学科导向。
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+如需了解课题组更多动态与研究详情，欢迎持续关注本网站更新。
 
-{%
-  include button.html
-  link="projects"
-  text="Browse our projects"
-  icon="fa-solid fa-arrow-right"
-  flip=true
-  style="bare"
-%}
-
-{% endcapture %}
-
-{%
-  include feature.html
-  image="images/photo.jpg"
-  link="projects"
-  title="Our Projects"
-  flip=true
-  style="bare"
-  text=text
-%}
-
-{% capture text %}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-{%
-  include button.html
-  link="team"
-  text="Meet our team"
-  icon="fa-solid fa-arrow-right"
-  flip=true
-  style="bare"
-%}
-
-{% endcapture %}
-
-{%
-  include feature.html
-  image="images/photo.jpg"
-  link="team"
-  title="Our Team"
-  text=text
-%}
+{% include section.html %}

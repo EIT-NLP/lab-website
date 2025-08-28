@@ -1,27 +1,15 @@
 ---
-title: Research
+title: 研究
 nav:
-  order: 1
-  tooltip: Published works
+  order: 2
+  tooltip: 研究项目与成果
 ---
+## 我们的研究
 
-# {% include icon.html icon="fa-solid fa-microscope" %}Research
+{% include list.html data="papers" component="citation_manual" style="rich" %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+<!-- {% include section.html %} -->
 
-{% include section.html %}
+<!-- ## 更多项目
 
-## Highlighted
-
-{% include citation.html lookup="Open collaborative writing with Manubot" style="rich" %}
-
-{% include section.html %}
-
-## All
-
-{% include search-box.html %}
-
-{% include search-info.html %}
-
-{% include list.html data="citations" component="citation" style="rich" %}
+{% include list.html data="projects" component="card" filters="group: more" %} -->

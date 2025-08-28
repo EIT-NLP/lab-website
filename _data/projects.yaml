@@ -1,47 +1,46 @@
-- title: Cool Dataset
-  subtitle: a subtitle
+- title: "多模态大语言模型连接器选择研究"
+  subtitle: "To Preserve or To Compress: An In-Depth Study of Connector Selection in Multimodal Large Language Models"
   group: featured
-  image: images/photo.jpg
-  link: https://github.com/
-  description: Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  repo: greenelab/lab-website-template
+  image: images/citations/2404_14122.png
+  link: https://github.com/EIT-NLP/Connector-Selection-for-MLLM
+  description: 系统探讨连接器对多模态大语言模型性能的影响，为MLLM架构设计提供重要指导
+  repo: EIT-NLP/Connector-Selection-for-MLLM
   tags:
-    - resource
+    - 多模态学习
+    - 大语言模型
+    - 架构设计
 
-- title: Cool Package
-  subtitle: a subtitle
+- title: "大语言模型翻译微调研究" 
+  subtitle: "Fine-Tuning Large Language Models to Translate"
   group: featured
-  image: images/photo.jpg
-  link: https://github.com/
-  description: Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  repo: greenelab/lab-website-template
+  image: images/projects/llm-translation.jpg
+  link: https://github.com/uds-lsv/mt-sft
+  description: 重新审视多语言机器翻译成功的关键因素，发现仅需32对平行句子即可实现强大翻译能力
+  repo: uds-lsv/mt-sft
   tags:
-    - resource
+    - 机器翻译
+    - 大语言模型
+    - 微调
 
-- title: Cool Tutorial
-  subtitle: a subtitle
-  image: images/photo.jpg
-  link: https://github.com/
-  description: Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  repo: greenelab/lab-website-template
+- title: "RLHF中的准确性悖论"
+  subtitle: "The Accuracy Paradox in RLHF"  
+  group: featured
+  image: images/projects/rlhf-paradox.jpg
+  link: https://github.com/EIT-NLP/AccuracyParadox-RLHF
+  description: 揭示人类反馈强化学习中的令人惊讶的悖论现象，挑战传统认知
+  repo: EIT-NLP/AccuracyParadox-RLHF
   tags:
-    - resource
-    - publication
+    - 强化学习
+    - 人类反馈
+    - 奖励模型
 
-- title: Cool Web App
-  subtitle: a subtitle
-  image: images/photo.jpg
-  link: https://github.com/
-  description: Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  repo: greenelab/lab-website-template
+- title: "信息搜索与检索"
+  subtitle: "Information Search and Retrieval"
+  group: active
+  image: images/projects/info-search.jpg  
+  link: https://github.com/EIT-NLP/InfoSearch
+  description: 开发高效的信息检索算法和系统
+  repo: EIT-NLP/InfoSearch
   tags:
-    - software
-
-- title: Cool Web Server
-  subtitle: a subtitle
-  image: images/photo.jpg
-  link: https://github.com/
-  description: Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  repo: greenelab/lab-website-template
-  tags:
-    - software
+    - 信息检索
+    - 搜索算法

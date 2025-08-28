@@ -96,7 +96,7 @@
     \n\u8868\u73B0\u7ADF\u7136\u4F18\u4E8E\u4F7F\u7528\u9AD8\u51C6\u786E\u7387\u5956\
     \u52B1\u6A21\u578B\u7684\u8BED\u8A00\u6A21\u578B\uFF0C\u4E3ARLHF\u7814\u7A76\u5F00\
     \u8F9F\u4E86\u65B0\u65B9\u5411\u3002\n"
-  image: images/citations/2410_06554.png
+  image: images/papers/rlhf-paradox.jpg
   buttons:
   - type: source
     link: https://github.com/EIT-NLP/AccuracyParadox-RLHF

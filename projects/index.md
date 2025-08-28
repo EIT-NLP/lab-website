@@ -1,27 +1,14 @@
 ---
-title: Projects
+title: 项目
 nav:
-  order: 2
-  tooltip: Software, datasets, and more
+  order: 5
+  tooltip: 项目
 ---
 
-# {% include icon.html icon="fa-solid fa-wrench" %}Projects
+# {% include icon.html icon="fa-solid fa-wrench" %}我们的项目
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-{% include tags.html tags="publication, resource, website" %}
-
-{% include search-info.html %}
-
-{% include section.html %}
-
-## Featured
+## 我们的项目
 
 {% include list.html component="card" data="projects" filter="group == 'featured'" %}
 
 {% include section.html %}
-
-## More
-
-{% include list.html component="card" data="projects" filter="!group" style="small" %}

@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - dev
 
   # run if user manually requests it
   workflow_dispatch:
