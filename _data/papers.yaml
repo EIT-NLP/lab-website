@@ -1,214 +1,337 @@
 # EIT-NLP实验室研究成果 - 基于官方网站内容
-
-# ========== 2024年重点论文 ==========
-
-- id: arxiv:2404.14122
+- id: arxiv:2503.08046v3
   type: paper
   featured: true
-  year: 2024
-  title: "Fine-Tuning Large Language Models to Translate: Will a Touch of Noisy Data in Misaligned Languages Suffice?"
+  year: 2025
+  title: "MultiConIR: Towards Multi-Condition Information Retrieval"
   authors:
-  - "**Dawei Zhu**"
-  - "Pinzhen Chen"
-  - "Miaoran Zhang"
-  - "Barry Haddow"
-  - "**Xiaoyu Shen**"
-  - "Dietrich Klakow"
-  publisher: "arXiv preprint"
-  date: '2024-04-22'
-  link: https://arxiv.org/pdf/2404.14122
-  description: "传统上，多语言机器翻译的成功归因于训练数据的三个关键因素：大规模数据量、多样化的翻译方向以及高质量的数据。在当前微调大语言模型（LLMs）以进行翻译的实践中，我们重新审视了这些因素的重要性。我们发现，LLMs 在仅微调 32 对平行句子的情况下就表现出了强大的翻译能力，并且微调单一翻译方向能够实现多方向的翻译。"
-  image: images/citations/2404_14122.png
-  buttons:
-  - type: source
-    link: https://github.com/uds-lsv/mt-sft
-    text: "代码仓库"
-  - type: website
-    link: https://arxiv.org/pdf/2404.14122
-    text: "PDF下载"
-  tags:
-  - "机器翻译"
-  - "大语言模型"
-  - "少样本学习"
-  repo: uds-lsv/mt-sft
-
-- id: arxiv:2410.06554
-  type: paper
-  featured: true
-  year: 2024
-  title: "The Accuracy Paradox in RLHF: When Better Reward Models Don't Yield Better Language Models"
-  authors:
-  - "**Yanjun Chen**"
-  - "**Dawei Zhu**"
-  - "Yirong Sun"
+  - "Xuan Lu"
+  - "Sifan Liu"
+  - "Bochao Yin"
+  - "Yongqi Li"
   - "Xinghao Chen"
-  - "Wei Zhang"
-  - "**Xiaoyu Shen**"
-  publisher: "arXiv preprint"
-  date: '2024-10-09'
-  link: https://arxiv.org/abs/2410.06554
-  description: "人类反馈强化学习显著提升了自然语言处理的效果，通过训练使语言模型更符合人类预期。本研究探讨了更强的奖励模型是否必然导致更优的语言模型表现。本文通过使用QA-FEEDBACK数据集和基于Longformer的奖励模型，针对相关性、事实性和完整性任务进行实验，揭示了一个令人惊讽的悖论：训练时使用中等准确率奖励模型的语言模型表现优于那些使用高准确率奖励模型的语言模型。"
-  image: images/citations/2410_06554.png
+  - "Hui Su"
+  - "Yaohui Jin"
+  - "Wenjun Zeng"
+  - "Xiaoyu Shen"
+  publisher: "EMNLP 2025 Findings"
+  date: '2025-09-04'
+  link: https://arxiv.org/abs/2503.08046v3
+  description: "Multi-condition information retrieval (IR) poses a significant yet underexplored challenge. We introduce MultiConIR, a benchmark for evaluating retrieval and reranking models under nuanced multi-condition queries across five domains. The benchmark examines three dimensions—complexity robustness, relevance monotonicity, and query format sensitivity. Experiments on 15 models reveal severe degradation as query complexity grows, with failures to maintain monotonicity and high sensitivity to query style and condition placement. The strong performance of GPT-4o highlights the gap between current IR systems and advanced LLMs. Our analysis further identifies factors behind reranker deterioration and the impact of condition positioning, offering insights for advancing IR systems in complex search scenarios."
+  image: images/papers/2503.08046v3.png
   buttons:
   - type: source
-    link: https://github.com/EIT-NLP/AccuracyParadox-RLHF
-    text: "代码仓库"
+    link: https://github.com/EIT-NLP/MultiConIR
+    text: "code"
   - type: website
-    link: https://arxiv.org/abs/2410.06554
-    text: "arXiv论文"
+    link: https://arxiv.org/abs/2503.08046v3
+    text: "web"
   tags:
-  - "强化学习"
-  - "人类反馈"
-  - "奖励模型"
-  repo: EIT-NLP/AccuracyParadox-RLHF
+  - "Information Retrieval"
+  - "Multi-condition Retrieval"
+  repo: EIT-NLP/MultiConIR
 
-- id: arxiv:2407.17011
+- id: arxiv:2504.21447
   type: paper
   featured: true
-  year: 2024
-  title: "Unveiling In-Context Learning: A Coordinate System to Understand Its Working Mechanism"
+  year: 2025
+  title: "Multimodal Language Models See Better When They Look Shallower"
   authors:
-  - "**Anhao Zhao**"
-  - "Fanghua Ye"
+  - "Haoran Chen"
+  - "Junyan Lin"
+  - "Xinhao Chen"
+  - "Yue Fan"
+  - "Xin Jin"
+  - "Hui Su"
+  - "Jianfeng Dong"
   - "Jinlan Fu"
-  - "**Xiaoyu Shen**"
-  publisher: "arXiv preprint"
-  date: '2024-07-17'
-  link: https://arxiv.org/pdf/2407.17011
-  description: "大型语言模型（LLMs）展现了显著的上下文学习（ICL）能力，然而其背后的工作机制仍未被充分理解。现有研究对ICL提出了两种相互矛盾的观点：一种强调演示中相似样本的重要性，指出标签正确性和更多示例的重要性；另一种则将ICL归因于LLM固有的任务识别能力，认为标签正确性和示例数量并非关键。在本研究中，我们提出了一个二维坐标系统，将这两种观点统一在一个系统框架中。"
-  image: images/citations/2407_17011.png
+  - "Xiaoyu Shen"
+  publisher: "EMNLP 2025"
+  date: '2025-04-30'
+  link: https://arxiv.org/abs/2504.21447
+  description: "Multimodal large language models (MLLMs) have achieved impressive performance across a wide range of tasks, typically using CLIP-ViT as their visual encoder due to its strong text-image alignment capabilities. While prior studies suggest that different CLIP-ViT layers capture different types of information, with shallower layers focusing on fine visual details and deeper layers aligning more closely with textual semantics, most MLLMs still select visual features based on empirical heuristics rather than systematic analysis. In this work, we propose a Layer-wise Representation Similarity approach to group CLIP-ViT layers with similar behaviors into {shallow, middle, and deep} categories and assess their impact on MLLM performance. Building on this foundation, we revisit the visual layer selection problem in MLLMs at scale, training LLaVA-style models ranging from 1.4B to 7B parameters. Through extensive experiments across 10 datasets and 4 tasks, we find that: (1) deep layers are essential for OCR tasks; (2) shallow and middle layers substantially outperform deep layers on reasoning tasks involving counting, positioning, and object localization; (3) a lightweight fusion of features across shallow, middle, and deep layers consistently outperforms specialized fusion baselines and single-layer selections, achieving gains on 9 out of 10 datasets. Our work offers the first principled study of visual layer selection in MLLMs, laying the groundwork for deeper investigations into visual representation learning for MLLMs."
+  image: images/papers/2504.21447.png
   buttons:
-  - type: source
-    link: https://github.com/EIT-NLP/2D-Coordinate-System-for-ICL
-    text: "代码仓库"
   - type: website
-    link: https://arxiv.org/pdf/2407.17011
-    text: "PDF下载"
+    link: https://arxiv.org/abs/2504.21447
+    text: "web"
   tags:
-  - "上下文学习"
-  - "大语言模型"
-  - "认知机制"
-  repo: EIT-NLP/2D-Coordinate-System-for-ICL
+  - "MLLM"
+  - "Visual Layer Selection"
 
-- id: arxiv:2410.06765
+- id: /
   type: paper
-  featured: true
-  year: 2024
-  title: "To Preserve or To Compress: An In-Depth Study of Connector Selection in Multimodal Large Language Models"
+  featured: false
+  year: 2025
+  title: "VisiPruner: Decoding Discontinuous Cross-Modal Dynamics for Efficient Multimodal LLMs"
   authors:
-  - "**Junyan Lin**"
-  - "**Haoran Chen**"
-  - "**Dawei Zhu**"
-  - "**Xiaoyu Shen**"
-  publisher: "arXiv preprint"
-  date: '2024-10-09'
-  link: http://arxiv.org/abs/2410.06765
-  description: "近年来，多模态大型语言模型（MLLMs）引起了产业界和学术界的广泛关注。根据融合位置的不同，MLLMs分为外部融合和内部融合架构，其中外部融合架构占主导地位。本文系统地探讨了连接器对MLLM性能的影响。具体而言，我们将连接器分为保留特征型和压缩特征型两类。通过统一的分类标准，我们将来自三个综合基准数据集（MMBench、MME、SEED-Bench）的子任务划分为粗粒度感知、细粒度感知和推理三种任务类型。"
-  image: images/citations/2410_06765.jpg
-  buttons:
-  - type: source
-    link: https://github.com/EIT-NLP/Connector-Selection-for-MLLM
-    text: "代码仓库"
-  - type: website
-    link: http://arxiv.org/abs/2410.06765
-    text: "arXiv论文"
-  tags:
-  - "多模态学习"
-  - "大语言模型"
-  - "架构优化"
-  repo: EIT-NLP/Connector-Selection-for-MLLM
-
-- id: arxiv:2410.04691
-  type: paper
-  featured: true
-  year: 2024
-  title: "Deeper Insights Without Updates: The Power of In-Context Learning Over Fine-Tuning"
-  authors:
-  - "**Qingyu Yin**"
-  - "Xuzheng He"
-  - "Luoao Deng"
-  - "Chak Tou Leong"
-  - "Fan Wang"
-  - "Yanzhao Yan"
-  - "**Xiaoyu Shen**"
-  - "Qiang Zhang"
-  publisher: "arXiv preprint"
-  date: '2024-10-04'
-  link: https://arxiv.org/abs/2410.04691
-  description: "微调和上下文学习（ICL）是两种常用的为大型语言模型注入任务特定知识的方法。通常认为，微调由于可以基于训练数据调整模型的内部参数，在有足够样本的情况下会优于ICL。然而，本文提出了一个反直觉的发现：对于隐式模式任务，ICL能够显著优于微调捕捉这些模式。我们构建了多个包含隐式模式的数据集，例如通过奇偶性确定答案的序列或在计算中识别可约项。"
-  image: images/citations/2410_04691.jpg
-  buttons:
-  - type: source
-    link: https://github.com/MikaStars39/ICLvsFinetune
-    text: "代码仓库"
-  - type: website
-    link: https://arxiv.org/abs/2410.04691
-    text: "arXiv论文"
-  tags:
-  - "上下文学习"
-  - "微调"
-  - "隐式模式"
-  repo: MikaStars39/ICLvsFinetune
-
-- id: arxiv:2406.18134
-  type: paper
-  featured: true
-  year: 2024
-  title: "Assessing 'Implicit' Retrieval Robustness of Large Language Models"
-  authors:
-  - "**Xiaoyu Shen**"
-  - "Rexhina Blloshmi"
-  - "**Dawei Zhu**"
-  - "Jiahuan Pei"
+  - "Yingqi Fan"
+  - "Anhao Zhao"
+  - "Jinlan Fu"
+  - "Junlong Tong"
+  - "Hui Su"
+  - "Yijie Pan"
   - "Wei Zhang"
-  publisher: "arXiv preprint"
-  date: '2024-06-18'
-  link: https://arxiv.org/pdf/2406.18134
-  description: "检索增强生成（Retrieval-augmented generation，RAG）作为一种通过外部知识增强大型语言模型的框架，近年来备受关注。然而，其有效性在很大程度上依赖于模型的检索稳健性。如果模型缺乏检索稳健性，其性能将受限于检索器的准确性，当检索到的上下文与任务无关时，模型表现可能大幅下降。在本文中，我们评估了不同大型语言模型的'隐式'检索稳健性，要求它们直接输出最终答案，而不显式判断检索到的上下文的相关性。"
-  image: images/citations/2406_18134.jpg
-  buttons:
-  - type: website
-    link: https://arxiv.org/pdf/2406.18134
-    text: "PDF下载"
+  - "Xiaoyu Shen"
+  publisher: "EMNLP 2025"
+  date: '2025-09-04'
+  description: "Multimodal Large Language Models (MLLMs) have achieved impressive performance on vision–language tasks, yet the quadratic growth of attention computation with respect to multimodal tokens incurs significant computational overhead. Although prior studies have explored token pruning in MLLMs, a fundamental understanding of how these models process and integrate multimodal information remains lacking. Through systematic analysis, this work reveals a three-stage process of cross-modal interaction in MLLMs: (1) in the shallow layers, the model primarily identifies task intent, with visual tokens acting as passive attention absorbers; (2) in the middle layers, cross-modal fusion occurs abruptly and is driven by a small set of key visual tokens; (3) in the deep layers, visual tokens are gradually discarded, and the model focuses solely on fine-grained linguistic processing. Building on these insights, we propose VisiPruner, a training-free dynamic pruning framework that reduces up to 99% of vision-related attention computation and 62.8% of FLOPs while preserving model performance. Moreover, VisiPruner demonstrates strong generalization across various MLLMs. Beyond pruning, our findings provide actionable guidance for training future efficient MLLMs, suggesting that aligning model architectures with their hierarchical processing dynamics can substantially improve efficiency."
+  image: images/papers/VisiPruner.png
   tags:
-  - "检索增强生成"
-  - "稳健性"
-  - "大语言模型"
+  - "MLLM"
+  - "Model Pruning"
 
-# ========== 2023年论文 ==========
-
-- id: arxiv:2309.16289
+- id: /
   type: paper
-  featured: true
-  year: 2023
-  title: "LawBench: Benchmarking Legal Knowledge of Large Language Models"
+  featured: false
+  year: 2025
+  title: "PricingLogic: Evaluating LLMs Reasoning on Complex Tourism Pricing Tasks"
   authors:
-  - "Zhiwei Fei"
-  - "**Xiaoyu Shen**"
-  - "**Dawei Zhu**"
-  - "Fengzhe Zhou"
-  - "Zhuo Han"
-  - "Alan Huang"
-  - "Songyang Zhang"
-  - "Kai Chen"
-  - "Zhixin Yin"
-  - "Zongwen Shen"
-  - "Jidong Ge"
-  - "Vincent Ng"
-  publisher: "arXiv preprint"
-  date: '2023-09-16'
-  link: https://arxiv.org/pdf/2309.16289
-  description: "我们提出了LawBench，这是第一个由20个任务组成的评估基准，旨在评估大型语言模型（LLMs）在处理中文法律相关任务中的表现。LawBench经过精心设计，能够从广泛接受的布卢姆认知分类法对应的三个认知层次上，精确评估LLMs的法律能力。利用LawBench，我们对21个热门LLMs进行了全面的评估，并首次对其实际表现进行了比较分析，揭示了它们的相对优势与劣势。"
-  image: images/citations/2309_16289.jpg
+  - "Yunuo Liu"
+  - "Zena Al Khalili"
+  - "Dawei Zhu"
+  - "Yanjun Chen"
+  - "Dietriech Klakow"
+  - "Xiaoyu Shen"
+  publisher: "EMNLP 2025"
+  date: '2025-09-04'
+  description: "We present PricingLogic, the first benchmark designed to evaluate whether Large Language Models (LLMs) can reliably automate tourism-booking prices under multiple, overlapping fare rules. Travel agencies are eager to delegate this error-prone task to AI systems; however, deploying LLMs without verified reliability risks substantial financial losses and undermines customer trust. PricingLogic consists of 300 natural-language booking requests derived from 42 real-world pricing policies, covering two levels of difficulty: (i) basic customer-type pricing and (ii) bundled-tour calculations involving interacting discounts. Evaluations across a range of LLMs reveal a sharp performance decline on the more challenging tier, exposing systematic weaknesses in rule interpretation and arithmetic reasoning. These findings underscore that, despite their broad capabilities, current LLMs remain unreliable for revenue-critical applications without additional safeguards or domain-specific adaptation."
+  image: images/papers/PricingLogic.png
+  tags:
+  - "Reasoning"
+  - "PricingLogic Benchmark"
+
+- id: arxiv:2504.18373
+  type: paper
+  featured: false
+  year: 2025
+  title: "Auto-SLURP: A Benchmark Dataset for Evaluating Multi-Agent Frameworks in Smart Personal Assistant"
+  authors:
+  - "Lei Shen"
+  - "Xiaoyu Shen"
+  publisher: "EMNLP 2025 Findings"
+  date: '2025-04-25'
+  link: https://arxiv.org/abs/2504.18373
+  description: "In recent years, multi-agent frameworks powered by large language models (LLMs) have advanced rapidly. Despite this progress, there is still a notable absence of benchmark datasets specifically tailored to evaluate their performance. To bridge this gap, we introduce Auto-SLURP, a benchmark dataset aimed at evaluating LLM-based multi-agent frameworks in the context of intelligent personal assistants. Auto-SLURP extends the original SLURP dataset -- initially developed for natural language understanding tasks -- by relabeling the data and integrating simulated servers and external services. This enhancement enables a comprehensive end-to-end evaluation pipeline, covering language understanding, task execution, and response generation. Our experiments demonstrate that Auto-SLURP presents a significant challenge for current state-of-the-art frameworks, highlighting that truly reliable and intelligent multi-agent personal assistants remain a work in progress."
+  image: images/papers/2504.18373.png
   buttons:
   - type: source
-    link: https://github.com/open-compass/LawBench/
-    text: "代码仓库"
+    link: https://github.com/lorashen/Auto-SLURP/
+    text: "code"
   - type: website
-    link: https://arxiv.org/pdf/2309.16289
-    text: "PDF下载"
+    link: https://arxiv.org/abs/2504.18373
+    text: "web"
   tags:
-  - "法律知识"
-  - "基准测试"
-  - "大语言模型"
-  repo: open-compass/LawBench
+  - "Multi-Agent Framework"
+  repo: lorashen/Auto-SLURP
+
+- id: arxiv:2508.01852
+  type: paper
+  featured: false
+  year: 2025
+  title: "Context Guided Transformer Entropy Modeling for Video Compression"
+  authors:
+  - "Junlong Tong"
+  - "Wei Zhang"
+  - "Yaohui Jin"
+  - "Xiaoyu Shen"
+  publisher: "ICCV 2025"
+  date: '2025-08-03'
+  link: https://arxiv.org/abs/2508.01852
+  description: "The entropy model is a critical component in video compression, as it determines the coding efficiency by estimating the probability distribution of quantized latent representations. A key challenge in entropy model lies in effectively capturing and utilizing contextual information, including temporal and spatial contexts, to accurately estimate the probability mass functions (PMFs) of video frames. This work introduces a Context Guided Transformer (CGT) entropy model, which leverages a temporal context resampler to distill long-range temporal cues into fixed-length representations and a dependency-weighted spatial context assigner to selectively model spatial dependencies in a structured order. By jointly addressing temporal and spatial context utilization, our approach achieves improved compression performance while significantly reducing computational overhead."
+  image: images/papers/2508.01852.png
+  buttons:
+  - type: source
+    link: https://github.com/EIT-NLP/CGT
+    text: "code"
+  - type: website
+    link: https://arxiv.org/abs/2508.01852
+    text: "web"
+  tags:
+  - "Video Compression"
+  repo: EIT-NLP/CGT
+
+- id: arxiv:2505.16983
+  type: paper
+  featured: false
+  year: 2025
+  title: "LLM as Effective Streaming Processor: Bridging Streaming-Batch Mismatches with Group Position Encoding"
+  authors:
+  - "Junlong Tong"
+  - "Jinlan Fu"
+  - "Zixuan Lin"
+  - "Yingqi Fan"
+  - "Anhao Zhao"
+  - "Hui Su"
+  - "Xiaoyu Shen"
+  publisher: "EMNLP 2025 Findings"
+  date: '2025-05-29'
+  link: https://arxiv.org/abs/2505.16983
+  description: "Large Language Models (LLMs) are primarily designed for batch processing. Existing methods for adapting LLMs to streaming rely either on expensive re-encoding or specialized architectures with limited scalability. This work identifies three key mismatches in adapting batch-oriented LLMs to streaming: (1) input-attention, (2) output-attention, and (3) position-ID mismatches. While it is commonly assumed that the latter two mismatches require frequent re-encoding, our analysis reveals that only the input-attention mismatch significantly impacts performance, indicating re-encoding outputs is largely unnecessary. To better understand this discrepancy with the common assumption, we provide the first comprehensive analysis of the impact of position encoding on LLMs in streaming, showing that preserving relative positions within source and target contexts is more critical than maintaining absolute order. Motivated by the above analysis, we introduce a group position encoding paradigm built on batch architectures to enhance consistency between streaming and batch modes. Extensive experiments on cross-lingual and cross-modal tasks demonstrate that our method outperforms existing approaches. Our method requires no architectural modifications, exhibits strong generalization in both streaming and batch modes."
+  image: images/papers/2505.16983.png
+  buttons:
+  - type: source
+    link: https://github.com/EIT-NLP/StreamingLLM
+    text: "code"
+  - type: website
+    link: https://arxiv.org/abs/2505.16983
+    text: "web"
+  tags:
+  - "Streaming Adaptation"
+  - "Group-Streaming Paradigm"
+  repo: EIT-NLP/StreamingLLM
+
+- id: arxiv:2506.04179
+  type: paper
+  featured: false
+  year: 2025
+  title: "SkipGPT: Each Token is One of a Kind"
+  authors:
+  - "Anhao Zhao"
+  - "Fanghua Ye"
+  - "Yingqi Fan"
+  - "Junlong Tong"
+  - "Zhiwei Fei"
+  - "Hui Su"
+  - "Xiaoyu Shen"
+  publisher: "ICML 2025"
+  date: '2025-01-04'
+  link: https://arxiv.org/abs/2506.04179
+  description: "Large Language Models (LLMs) deliver impressive performance but at high computational cost. SkipGPT introduces a dynamic layer pruning framework that improves efficiency by combining token-aware routing with differentiated pruning strategies for MLP and attention layers. To ensure stability, it adopts a two-stage optimization process: learning routing policies first, then restoring performance through lightweight fine-tuning. Experiments show SkipGPT reduces parameters by over 40% while maintaining or surpassing the original model’s accuracy, offering a practical path toward scalable and resource-efficient LLM deployment."
+  image: images/papers/2506.04179.png
+  buttons:
+  - type: source
+    link: https://github.com/EIT-NLP/SkipGPT
+    text: "code"
+  - type: website
+    link: https://arxiv.org/abs/2506.04179
+    text: "web"
+  tags:
+  - "Model Efficiency"
+  - "Dynamic Layer Pruning"
+  repo: EIT-NLP/SkipGPT
+
+- id: arxiv:2504.07858
+  type: paper
+  featured: false
+  year: 2025
+  title: "Scaling Under-Resourced TTS: A Data-Optimized Framework with Advanced Acoustic Modeling for Thai"
+  authors:
+  - "Yizhong Geng"
+  - "Jizhuo Xu"
+  - "Zeyu Liang"
+  - "Jinghan Yang"
+  - "Xiaoyi Shi"
+  - "Xiaoyu Shen"
+  publisher: "ACL 2025 (Industry Track)"
+  date: '2025-04-10'
+  link: https://arxiv.org/abs/2504.07858
+  description: "Text-to-speech (TTS) technology has achieved impressive results for widely spoken languages, yet many under-resourced languages remain challenged by limited data and linguistic complexities. In this paper, we present a novel methodology that integrates a data-optimized framework with an advanced acoustic model to build high-quality TTS systems for low-resource scenarios. We demonstrate the effectiveness of our approach using Thai as an illustrative case, where intricate phonetic rules and sparse resources are effectively addressed. Our method enables zero-shot voice cloning and improved performance across diverse client applications, ranging from finance to healthcare, education, and law. Extensive evaluations—both subjective and objective—confirm that our model meets state-of-the-art standards, offering a scalable solution for TTS production in data-limited settings, with significant implications for broader industry adoption and multilingual accessibility."
+  image: images/papers/2504.07858.png
+  buttons:
+  - type: source
+    link: https://luoji.cn/static/thai/demo.html
+    text: "演示页面"
+  - type: website
+    link: https://arxiv.org/abs/2504.07858
+    text: "web"
+  tags:
+  - "Text-to-Speech"
+  - "Low-Resource Languages"
+  repo: 
+
+- id: arxiv:2502.18001
+  type: paper
+  featured: false
+  year: 2025
+  title: "Unveiling the Key Factors for Distilling Chain-of-Thought Reasoning"
+  authors:
+  - "Xinghao Chen"
+  - "Zhijing Sun"
+  - "Wenjin Guo"
+  - "Miaoran Zhang"
+  - "Yanjun Chen"
+  - "Yirong Sun"
+  - "Hui Su"
+  - "Yijie Pan"
+  - "Dietrich Klakow"
+  - "Wenjie Li"
+  - "Xiaoyu Shen"
+  publisher: "ACL 2025 Findings"
+  date: '2025-05-27'
+  link: https://arxiv.org/abs/2502.18001
+  description: "Large Language Models (LLMs) achieve strong reasoning via Chain-of-Thought (CoT) prompting, but at high computational cost, motivating CoT distillation into Small Language Models (SLMs). This work examines how granularity, format, and teacher choice affect CoT distillation through experiments on four teachers, seven students, and seven reasoning benchmarks. We find: (1) SLMs show a non-monotonic response to granularity—stronger models prefer finer reasoning, weaker ones simpler supervision; (2) CoT format strongly influences LLMs but barely affects SLMs; (3) Stronger teachers do not always yield better students, as diversity and complexity can outweigh accuracy. These results highlight the need to tailor CoT strategies to student models, offering practical guidance for SLM distillation."
+  image: images/papers/2502.18001.png
+  buttons:
+  - type: source
+    link: https://github.com/EIT-NLP/Distilling-CoT-Reasoning
+    text: "code"
+  - type: website
+    link: https://arxiv.org/abs/2502.18001
+    text: "web"
+  tags:
+  - "CoT"
+  - "Distillation"
+  repo: EIT-NLP/Distilling-CoT-Reasoning
+
+- id: arxiv:2503.06063
+  type: paper
+  featured: false
+  year: 2025
+  title: "Multi-Layer Visual Feature Fusion in Multimodal LLMs: Methods, Analysis, and Best Practices"
+  authors:
+  - "Junyan Lin"
+  - "Haoran Chen"
+  - "Yue Fan"
+  - "Yingqi Fan"
+  - "Xin Jin"
+  - "Hui Su"
+  - "Jinlan Fu"
+  - "Xiaoyu Shen"
+  publisher: "CVPR 2025"
+  date: '2025-03-08'
+  link: https://arxiv.org/abs/2503.06063
+  description: "Multimodal Large Language Models (MLLMs) have made significant advancements in recent years, with visual features playing an increasingly critical role in enhancing model performance. However, the integration of multi-layer visual features in MLLMs remains underexplored, particularly with regard to optimal layer selection and fusion strategies. Existing methods often rely on arbitrary design choices, leading to suboptimal outcomes. In this paper, we systematically investigate two core aspects of multi-layer visual feature fusion: (1) selecting the most effective visual layers and (2) identifying the best fusion approach with the language model. Our experiments reveal that while combining visual features from multiple stages improves generalization, incorporating additional features from the same stage typically leads to diminished performance. Furthermore, we find that direct fusion of multi-layer visual features at the input stage consistently yields superior and more stable performance across various configurations. "
+  image: images/papers/2503.06063.png
+  buttons:
+  - type: source
+    link: https://github.com/EIT-NLP/Layer_Select_Fuse_for_MLLM
+    text: "code"
+  - type: website
+    link: https://arxiv.org/abs/2503.06063
+    text: "web"
+  tags:
+  - "MLLM"
+  - "Layer Selection"
+  repo: EIT-NLP/Layer_Select_Fuse_for_MLLM
+
+- id: arxiv:2410.23841
+  type: paper
+  featured: false
+  year: 2025
+  title: "Beyond Content Relevance: Evaluating Instruction Following in Retrieval Models"
+  authors:
+  - "Jianqun Zhou"
+  - "Yuanlei Zheng"
+  - "Wei Chen"
+  - "Qianqian Zheng"
+  - "Hui Su"
+  - "Wei Zhang"
+  - "Rui Meng"
+  - "Xiaoyu Shen"
+  publisher: "ICLR 2025"
+  date: '2025-03-05'
+  link: https://arxiv.org/abs/2410.23841
+  description: "Instruction-following capabilities in LLMs have progressed significantly, enabling more complex user interactions through detailed prompts. However, retrieval systems have not matched these advances, most of them still relies on traditional lexical and semantic matching techniques that fail to fully capture user intent. Recent efforts have introduced instruction-aware retrieval models, but these primarily focus on intrinsic content relevance, which neglects the importance of customized preferences for broader document-level attributes. This study evaluates the instruction-following capabilities of various retrieval models beyond content relevance, including LLM-based dense retrieval and reranking models. We develop InfoSearch, a novel retrieval evaluation benchmark spanning six document-level attributes: Audience, Keyword, Format, Language, Length, and Source, and introduce novel metrics -- Strict Instruction Compliance Ratio (SICR) and Weighted Instruction Sensitivity Evaluation (WISE) to accurately assess the models' responsiveness to instructions. Our findings indicate that although fine-tuning models on instruction-aware retrieval datasets and increasing model size enhance performance, most models still fall short of instruction compliance."
+  image: images/papers/2410.23841.png
+  buttons:
+  - type: source
+    link: https://github.com/EIT-NLP/InfoSearch
+    text: "code"
+  - type: website
+    link: https://arxiv.org/abs/2410.23841
+    text: "web"
+  tags:
+  - "Information Retrieval"
+  - "Instruction-following Retrieval"
+  repo: EIT-NLP/InfoSearch
