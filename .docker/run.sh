@@ -20,9 +20,9 @@ if [[ $OSTYPE == msys* ]] || [[ $OSTYPE == cygwin* ]]; then
 fi
 
 # build docker image
-docker build ${PLATFORM} \
-    --tag ${IMAGE} \
-    --file ./.docker/Dockerfile . && \
+# docker build ${PLATFORM} \
+#     --tag ${IMAGE} \
+#     --file ./.docker/Dockerfile . && \
 
 # run built docker image
 ${DOCKER_RUN} ${PLATFORM} \
@@ -31,7 +31,7 @@ ${DOCKER_RUN} ${PLATFORM} \
     --rm \
     --interactive \
     --tty \
-    --publish 4000:4000 \
+    --publish 368:4000 \
     --publish 35729:35729 \
     --volume "${WORKING_DIR}:/usr/src/app" \
     ${IMAGE} "$@"

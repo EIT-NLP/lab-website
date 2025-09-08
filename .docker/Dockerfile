@@ -5,7 +5,8 @@ FROM ruby:3.1.2
 WORKDIR /usr/src/app
 
 # pull in ruby (jekyll) and python (cite process) package info
-COPY Gemfile Gemfile.lock _cite/requirements.txt ./
+COPY Gemfile Gemfile.lock ./
+COPY _cite/requirements.txt ./
 
 # install ruby packages
 RUN VERSION=$(grep -A 1 'BUNDLED WITH' Gemfile.lock | tail -n 1 | xargs); \
@@ -20,6 +21,9 @@ RUN python3 -m pip install --no-cache-dir --upgrade --requirement requirements.t
 
 # install python package for listening for file changes
 RUN pip install "watchdog[watchmedo]==3.0.0"
+
+# copy the entire _cite directory
+COPY _cite/ ./_cite/
 
 # ports used by jekyll
 EXPOSE 4000
