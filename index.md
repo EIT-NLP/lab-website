@@ -18,7 +18,7 @@ nav:
 
 ## 新闻
 
-{% include list.html data="citations" component="citation" filters="group: featured" %}
+{% include list.html data="papers" component="citation" filters="group: featured" %}
 
 {% include section.html %}
 
