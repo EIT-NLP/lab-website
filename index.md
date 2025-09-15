@@ -18,7 +18,7 @@ nav:
 
 ## 新闻
 
-{% include list.html data="citations" component="citation" filters="group: featured" %}
+{% include list.html data="papers" component="citation" filters="group: featured" %}
 
 {% include section.html %}
 
@@ -30,7 +30,7 @@ At the NLP group, we align with EIT's mission to drive transformative research. 
 
 For more updates, follow us on our official WeChat public account: EIT-NLP.
 <p style="text-align: center;">
-    <img src="images/nlp-web-wechat.png" alt="EIT-NLP 微信公众号二维码" width="200" class="center">
+    <img src="https://free.picui.cn/free/2025/09/15/68c7e13610855.png" alt="EIT-NLP 微信公众号二维码" width="200" class="center">
 </p>
 
 {% include section.html %}

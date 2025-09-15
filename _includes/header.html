@@ -1,11 +1,11 @@
 {% assign image = page.header | default: site.header %}
 {% assign dark = page.header-dark | is_nil: site.header-dark | is_nil: true %}
 
-{% assign svg_path = "images/lab_logo_icon.svg" %}
+{% assign svg_path = "https://pic1.imgdb.cn/item/68c7dabfc5157e1a8806d4c3.svg" %}
 {% assign svg_exists = svg_path | file_exists %}
 
 {% assign svg = "images/lab_logo_icon1.svg" | file_exists %}
-{% assign png = "images/lab_logo_icon.png" | file_exists %}
+{% assign png = "https://pic1.imgdb.cn/item/68c7dab7c5157e1a8806d464.png" | file_exists %}
 {% assign icon_png = "images/lab_logo_icon.png" | file_exists %}
 {% assign jpg = "images/logo.jpg" | file_exists %}
 {% assign logo = svg | default: png | default: icon_png | default: jpg | default: nil %}
