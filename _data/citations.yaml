@@ -22,7 +22,7 @@
     \u5EA6\u611F\u77E5\u3001\u7EC6\u7C92\u5EA6\u611F\u77E5\u548C\u63A8\u7406\u4E09\
     \u79CD\u7C7B\u578B\uFF0C\u4E3AMLLM\u67B6\u6784\u8BBE\u8BA1\u63D0\u4F9B\u91CD\u8981\
     \u6307\u5BFC\u3002\n"
-  image: https://pic1.imgdb.cn/item/68c7e0ffc5157e1a880715dc.jpg
+  image: images/papers/mllm-connector.jpg
   buttons:
   - type: source
     link: https://github.com/EIT-NLP/Connector-Selection-for-MLLM
