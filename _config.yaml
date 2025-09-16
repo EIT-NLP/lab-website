@@ -6,7 +6,7 @@ header: images/background.jpg
 footer: images/background.jpg
 logo: images/lab_logo_icon.png
 baseurl: "/sys"
-url: ""
+url: "https://idt.eitech.edu.cn"
 proofer: false
 
 # site social media and other links
