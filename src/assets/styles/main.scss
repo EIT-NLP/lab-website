@@ -1,0 +1,66 @@
+// Import all styles from Jekyll project
+@import "anchor";
+@import "background";
+@import "bold";
+@import "button";
+@import "card";
+@import "citation";
+@import "code";
+@import "cols";
+@import "dark-toggle";
+@import "feature";
+@import "figure";
+@import "float";
+@import "footer";
+@import "form";
+@import "grid";
+@import "header";
+@import "heading";
+@import "highlight";
+@import "icon";
+@import "image";
+@import "link";
+@import "list";
+@import "paragraph";
+@import "portrait";
+@import "post-excerpt";
+@import "post-info";
+@import "post-nav";
+@import "quote";
+@import "rule";
+@import "search-box";
+@import "search-info";
+@import "section";
+@import "table";
+@import "tags";
+@import "tooltip";
+@import "util";
+
+// Override some variables for Vue
+:root {
+  --primary: #007acc;
+  --background: #ffffff;
+  --background-alt: #f5f5f5;
+  --text: #000000;
+  --text-light: #666666;
+  --gray: #808080;
+  --thin: 1px;
+  --thick: 3px;
+  --rounded: 5px;
+  --shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  --transition: 0.2s ease;
+  
+  // Font settings to match target website
+  --body: 'Barlow', sans-serif;
+  --heading: 'Barlow', sans-serif;
+  --title: 'Barlow', sans-serif;
+  --font-size: 16px;
+  --line-height: 1.5;
+}
+
+[data-dark="true"] {
+  --background: #1a1a1a;
+  --background-alt: #2a2a2a;
+  --text: #e0e0e0;
+  --text-light: #b0b0b0;
+}

@@ -1,0 +1,27 @@
+# Apache服务器配置
+# 支持Vue Router的history模式和/sys/路径
+
+RewriteEngine On
+
+# 处理/sys/路径
+RewriteBase /sys/
+
+# 如果请求的是文件或目录，直接返回
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 所有其他请求都重定向到index.html
+RewriteRule ^ index.html [L]
+
+# 设置缓存头
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>
