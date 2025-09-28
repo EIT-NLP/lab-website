@@ -29,7 +29,11 @@ const router = createRouter({
     {
       path: '/projects',
       name: 'projects',
-      component: ProjectsView
+      component: ProjectsView,
+      meta: {
+        hideFooter: true,
+        hideHeader: true
+      }
     },
     {
       path: '/hiring',

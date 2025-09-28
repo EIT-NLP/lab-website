@@ -1,11 +1,29 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import ProjectCard from '../components/ProjectCard.vue'
 import { getProjects } from '../data/projects'
-import { ElButton } from 'element-plus'
-import { VideoPlay, VideoPause } from '@element-plus/icons-vue'
+import { ElButton, ElInput, ElIcon } from 'element-plus'
+import { VideoPlay, VideoPause, Search } from '@element-plus/icons-vue'
 const projects = ref([])
 const moreProjects = ref([])
+
+// 页眉相关数据
+const navOpen = ref(false)
+const isDark = ref(true)
+const currentLang = ref('zh')
+const searchQuery = ref('')
+
+const logoImage = computed(() => {
+  return new URL('../assets/images/lab_logo_icon.png', import.meta.url).href
+})
+
+const navPages = [
+  { path: '/', title: '首页', tooltip: '主页' },
+  { path: '/research', title: '研究', tooltip: '研究项目与成果' },
+  { path: '/team', title: '团队', tooltip: '课题组成员' },
+  { path: '/hiring', title: '招聘', tooltip: '招聘信息' },
+  { path: '/projects', title: '项目', tooltip: '查看项目' },
+]
 
 // 引用图片列表 - 使用动态导入
 const citationImages = ref([
@@ -75,6 +93,21 @@ const onVideoEnded = () => {
   isVideoPlaying.value = false
 }
 
+// 语言切换
+const switchLanguage = (lang) => {
+  currentLang.value = lang
+  // 这里可以添加国际化逻辑
+  console.log('切换到语言:', lang)
+}
+
+// 搜索处理
+const handleSearch = () => {
+  if (searchQuery.value.trim()) {
+    console.log('搜索:', searchQuery.value)
+    // 这里可以添加搜索逻辑
+  }
+}
+
 onMounted(async () => {
   const allProjects = await getProjects()
   projects.value = allProjects.filter(p => p.group !== 'more')
@@ -83,6 +116,72 @@ onMounted(async () => {
 </script>
 <template>
   <div class="projects-page">
+    <!-- 自定义页眉 -->
+    <header class="custom-header">
+      <div class="header-content">
+        <!-- 主要内容区域 -->
+        <div class="main-content">
+          <router-link to="/" class="logo-link">
+            <span class="logo">
+              <img :src="logoImage" alt="logo">
+            </span>
+          </router-link>
+          <nav class="main-nav">
+            <router-link to="/" class="nav-item">首页</router-link>
+            <router-link to="/research" class="nav-item">论文发表</router-link>
+            <router-link to="/team" class="nav-item">研究团队</router-link>
+            <router-link to="/projects" class="nav-item">项目</router-link>
+            <router-link to="/hiring" class="nav-item">加入我们</router-link>
+          </nav>
+        </div>
+        
+        <!-- 功能区域 -->
+        <div class="functional-content">
+          <!-- 中英文切换 -->
+          <div class="language-switch">
+            <button 
+              class="lang-btn"
+              :class="{ active: currentLang === 'zh' }"
+              @click="switchLanguage('zh')"
+            >
+              中
+            </button>
+            <span class="lang-separator">|</span>
+            <button 
+              class="lang-btn"
+              :class="{ active: currentLang === 'en' }"
+              @click="switchLanguage('en')"
+            >
+              EN
+            </button>
+          </div>
+          
+          <!-- 搜索框 -->
+          <div class="search-box">
+            <el-input
+              v-model="searchQuery"
+              placeholder="搜索..."
+              class="search-input"
+              @keyup.enter="handleSearch"
+            >
+              <template #suffix>
+                <el-icon class="search-icon" @click="handleSearch">
+                  <Search />
+                </el-icon>
+              </template>
+            </el-input>
+          </div>
+          
+          <!-- 移动端菜单按钮 -->
+          <input 
+            class="nav-toggle" 
+            type="checkbox" 
+            aria-label="show/hide nav"
+            v-model="navOpen"
+          >
+        </div>
+      </div>
+    </header>
 
     <!-- 主容器 -->
     <main class="main-container">
@@ -240,7 +339,10 @@ onMounted(async () => {
             <p>|</p>
             <p>地址：浙江省宁波市镇海区庄市街道同心路568号</p>
             <p>|</p>
-            <p>Built with Lab Website Template</p>
+            <p>
+              <img src="@/assets/images/base/github-mark-white.svg" alt="GitHub" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;" />
+              Built with Lab Website Template
+            </p>
           </div>
         </div>
       </div>
@@ -257,6 +359,277 @@ onMounted(async () => {
   background: #ffffff;
   display: flex;
   flex-direction: column;
+}
+
+// 自定义页眉样式
+.custom-header {
+  position: relative;
+  background: #7a7a7a;
+  color: #ffffff;
+  z-index: 1;
+  padding: 20px 0;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  // opacity: 0.6;
+  font-family: 'PingFang SC';
+  font-size: 24px;
+  font-weight: 600;
+  font-style: Semibold;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+// 主要内容区域
+.main-content {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 60px;
+}
+
+.logo > * {
+  width: unset;
+  height: 100%;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-family: var(--heading);
+}
+
+.nav-item {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-item:hover {
+  color: #ffffff;
+}
+
+.nav-item.router-link-active {
+  color: #ffffff;
+}
+
+.nav-item.router-link-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 1px;
+}
+
+// 功能区域
+.functional-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+// 语言切换
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+  position: relative;
+}
+
+.lang-btn:hover {
+  opacity: 1;
+}
+
+.lang-btn.active {
+  opacity: 1;
+  color: #ffffff;
+}
+
+.lang-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 1px;
+}
+
+.lang-separator {
+  color: #ffffff;
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+// 搜索框
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 200px;
+}
+
+.search-input :deep(.el-input__wrapper) {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+.search-input :deep(.el-input__inner) {
+  color: #ffffff;
+  background: transparent;
+}
+
+.search-input :deep(.el-input__inner::placeholder) {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-input :deep(.el-input__suffix) {
+  color: #ffffff;
+}
+
+.search-icon {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.search-icon:hover {
+  color: var(--primary);
+}
+
+.nav-toggle {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  color: #ffffff;
+  appearance: none;
+  transition: background var(--transition);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle:after {
+  content: "\f0c9";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  transform: translate(-50%, -50%);
+}
+
+.nav-toggle:checked:after {
+  content: "\f00d";
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .header-content {
+    padding: 0 15px;
+  }
+  
+  .main-content {
+    gap: 20px;
+  }
+  
+  .main-nav {
+    gap: 20px;
+  }
+  
+  .nav-item {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    padding: 0 10px;
+  }
+  
+  .main-content {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #222222;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 100;
+  }
+  
+  .functional-content {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+  }
+  
+  .search-input {
+    width: 150px;
+  }
+  
+  .nav-toggle {
+    display: block;
+  }
+  
+  .nav-toggle:checked ~ .main-content .main-nav {
+    display: flex;
+  }
 }
 
 

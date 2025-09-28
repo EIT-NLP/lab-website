@@ -1,7 +1,7 @@
 <template>
   <header 
-    class="background" 
-    :style="`--image: url('${backgroundImage}')`"
+    :class="headerClass"
+    :style="headerStyle"
     :data-dark="isDark"
     v-bind="isHomePage ? { 'data-big': '' } : {}"
   >
@@ -40,10 +40,24 @@ const navOpen = ref(false)
 const isDark = ref(true)
 
 const isHomePage = computed(() => route.path === '/')
+const isProjectsPage = computed(() => route.path === '/projects')
 
 const backgroundImage = computed(() => {
   // Use the same background image as Jekyll
   return new URL('../assets/images/background.jpg', import.meta.url).href
+})
+
+// 根据页面类型决定header的class
+const headerClass = computed(() => {
+  return isProjectsPage.value ? 'projects-header' : 'background'
+})
+
+// 根据页面类型决定header的style
+const headerStyle = computed(() => {
+  if (isProjectsPage.value) {
+    return 'background-color: #f5f5f5;'
+  }
+  return `--image: url('${backgroundImage.value}')`
 })
 
 const logoImage = computed(() => {
@@ -61,4 +75,22 @@ const navPages = [
 
 <style scoped lang="scss">
 // Header styles are imported from _styles/header.scss
+
+// 项目页面的特殊header样式
+.projects-header {
+  position: relative;
+  background: #f5f5f5;
+  color: var(--text);
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 </style>
