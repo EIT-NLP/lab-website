@@ -1,7 +1,7 @@
 // 页面头部统一样式
 // 基于各个页面的 page-header 样式，统一所有页面的页面头部样式
 
-.page-header {
+.header-section {
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -50,7 +50,7 @@
 
 // 响应式设计
 @media (max-width: 768px) {
-  .page-header {
+  .header-section {
     margin-bottom: 2rem;
     
     h1 {
@@ -68,7 +68,7 @@
 }
 
 @media (max-width: 480px) {
-  .page-header {
+  .header-section {
     margin-bottom: 1.5rem;
     
     h1 {

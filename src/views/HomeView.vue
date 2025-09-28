@@ -1,12 +1,12 @@
 <template>
   <div class="home-page">
-    <div class="page-header">
+    <section class="header-section">
       <h1>宁波东方理工大学自然语言处理课题组</h1>
       
       <p>
         我们是<a href="https://www.eitech.edu.cn/" target="_blank">宁波东方理工大学</a>自然语言处理课题组（EIT-NLP）。依托的宁波东方理工大学，坐落于孕育过王阳明、黄宗羲等思想大家与屠呦呦等科学大师的宁波 —— 这座东南沿海的港口名城与历史文化之城。学校以 "服务国家发展、推动社会进步" 为使命，是一所社会力量举办、省市共同建设、国家重点支持的高起点、小而精、创新型、国际化的新型研究型大学。
       </p>
-    </div>
+    </section>
 
     <section class="news-section">
       <h2 class="news-section-title">新闻</h2>

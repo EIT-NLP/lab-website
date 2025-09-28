@@ -1,12 +1,12 @@
 <template>
   <div class="hiring-page">
-    <div class="page-header">
+    <section class="header-section">
       <h1><i class="fa-solid fa-briefcase"></i> 加入我们</h1>
       
       <p>
         课题组专注培养具有科学精神的创新创业顶级人才，提供优越的科研条件、优厚的薪资待遇、广阔的发展空间、多样化的国际学术交流以及与知名企业交流合作的机会。现诚邀国内外具有相关研究背景的青年才俊、优秀学者或交换生加盟。
       </p>
-    </div>
+    </section>
 
     <section class="vision-section">
       <h2>实验室愿景</h2>

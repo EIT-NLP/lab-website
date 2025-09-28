@@ -1,7 +1,7 @@
 <template>
   <div class="research-page">
     <!-- 页面标题和描述 -->
-    <div class="page-header">
+    <section class="header-section">
       <h1>
         <i class="fas fa-microscope"></i>
         我们的研究
@@ -10,7 +10,7 @@
         我们致力于自然语言处理、多模态学习、信息检索等前沿领域的研究，
         致力于推动人工智能技术的发展和应用。
       </p>
-    </div>
+    </section>
 
     <!-- 章节分隔符 -->
     <div class="section-break"></div>

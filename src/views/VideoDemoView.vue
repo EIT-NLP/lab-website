@@ -1,9 +1,9 @@
 <template>
   <div class="video-demo-page">
-    <div class="page-header">
+    <section class="header-section">
       <h1>短视频滑动区演示</h1>
       <p>基于设计稿实现的短视频滑动组件</p>
-    </div>
+    </section>
     
     <VideoSlider />
     

@@ -1,6 +1,6 @@
 <template>
   <div class="team-page">
-    <div class="page-header">
+    <section class="header-section">
       <h1><i class="fa-solid fa-users"></i> 我们的团队</h1>
       
       <p class="intro">
@@ -9,7 +9,7 @@
       <p class="intro">
         我们始终致力于两方面的核心工作：一是研发创新算法，让机器实现对人类语言的深度理解、精准生成与逻辑推理；二是推动 AI 技术在服务细分领域的落地应用，呼应学校 "强化基础研究、聚焦前沿交叉" 的学科导向。
       </p>
-    </div>
+    </section>
     <section class="pi-section">
       <h2>PI 简介</h2>
       
