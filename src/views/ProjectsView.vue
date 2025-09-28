@@ -443,10 +443,10 @@ onMounted(async () => {
           line-height: 100%;
           letter-spacing: 0;
           margin-top: 0px;
-          margin-bottom: 65px;
+          margin-bottom: 45px;
           height:100%;
           flex: 4;
-          padding: 30px 0px 55px 0px;
+          padding: 30px 0px 0px 0px;
                   
           /* leading-trim: NONE;  CSS暂不支持leading-trim，忽略 */
         }
@@ -458,8 +458,8 @@ onMounted(async () => {
           /* leading-trim: NONE;  CSS暂不支持leading-trim，忽略 */
           line-height: 50px;
           letter-spacing: 0;
-          color: #656565;
-          margin: 0;
+          color: #424242;
+          margin-top: 0px;
           text-align: justify;
           
         }
