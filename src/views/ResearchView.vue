@@ -1,7 +1,7 @@
 <template>
   <div class="research-page">
     <!-- 页面标题和描述 -->
-    <div class="page-header">
+    <section class="header-section">
       <h1>
         <i class="fas fa-microscope"></i>
         我们的研究
@@ -10,7 +10,7 @@
         我们致力于自然语言处理、多模态学习、信息检索等前沿领域的研究，
         致力于推动人工智能技术的发展和应用。
       </p>
-    </div>
+    </section>
 
     <!-- 章节分隔符 -->
     <div class="section-break"></div>
@@ -144,42 +144,7 @@ onMounted(async () => {
   padding: 2rem;
 }
 
-// 页面头部
-.page-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  
-  h1 {
-    margin: 40px 0;
-    font-family: "Barlow", sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 1.4;
-    color: var(--text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    
-    i {
-      color: var(--primary);
-    }
-  }
-  
-  .page-description {
-    font-size: 16px;
-    line-height: 32px;
-    text-align: justify;
-    // margin-bottom: 1rem;
-    text-align: center;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+// page-header 样式已由全局样式统一处理
 
 // 章节分隔符
 .section-break {
@@ -191,21 +156,6 @@ onMounted(async () => {
 // 重点论文区域
 .highlighted-section {
   margin-bottom: 3rem;
-  
-  h2 {
-    font-family: "Barlow", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 1.4;
-    margin: 40px 0 20px 0;
-    padding-bottom: 5px;
-    border-bottom: solid 1px var(--light-gray, #e0e0e0);
-    color: var(--text);
-  }
-  
   .highlighted-papers {
     display: flex;
     flex-direction: column;
@@ -214,21 +164,6 @@ onMounted(async () => {
 }
 
 // 全部论文区域
-.all-papers-section {
-  h2 {
-    font-family: "Barlow", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 1.4;
-    margin: 40px 0 20px 0;
-    padding-bottom: 5px;
-    border-bottom: solid 1px var(--light-gray, #e0e0e0);
-    color: var(--text);
-  }
-}
 
 // 搜索框
 .search-box {

@@ -1,6 +1,6 @@
 <template>
   <div class="hiring-page">
-    <section class="hero-section">
+    <section class="header-section">
       <h1><i class="fa-solid fa-briefcase"></i> 加入我们</h1>
       
       <p>
@@ -120,9 +120,7 @@
   padding: 2rem;
 }
 
-* {
-  font-family: "PingFang SC";
-}
+// 全局字体样式已统一
 
 section {
   margin-bottom: 4rem;
@@ -132,124 +130,9 @@ section {
   }
 }
 
-h1 {
-  margin: 40px 0;
-  font-family: "Barlow", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 1px;
-  line-height: 1.4;
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  
-  i {
-    color: var(--primary);
-  }
-}
+// 全局样式已统一处理 h1, h2, h3, h4, p, ul, ol, li 标签
 
-h2 {
-  font-family: "Barlow", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: left;
-  letter-spacing: 1px;
-  line-height: 1.4;
-  margin: 40px 0 20px 0;
-  padding-bottom: 5px;
-  border-bottom: solid 1px var(--light-gray, #e0e0e0);
-  color: var(--text);
-}
-
-h3 {
-  font-family: "Barlow", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-align: left;
-  letter-spacing: 1px;
-  line-height: 1.4;
-  margin: 40px 0 20px 0;
-  color: var(--primary);
-}
-
-h4 {
-  font-family: "Barlow", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 500;
-  text-align: left;
-  letter-spacing: 1px;
-  line-height: 1.4;
-  margin: 40px 0 20px 0;
-  color: var(--text);
-}
-
-p {
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 400;
-  color: var(--text);
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0;
-  text-align: justify;
-  
-  a {
-    color: var(--primary);
-    text-decoration: none;
-    
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-ul, ol {
-  margin: 1rem 0;
-  padding-left: 1.5rem;
-  
-  li {
-    font-size: 16px;
-    line-height: 32px;
-    margin-bottom: 0.8rem;
-    color: var(--text);
-    text-align: justify;
-  }
-}
-
-.hero-section {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 0 0 0 0;
-  margin-bottom: 2rem;
-  
-  h1 {
-    font-size: 24px;
-    // margin-bottom: 1rem;
-    text-align: center;
-    color: var(--text);
-    font-weight: 400;
-    line-height: 36px;
-  }
-  
-  p {
-    margin: 20px 0 20px 0;
-    font-size: 16px;
-    line-height: 32px;
-    text-align: justify;
-    // text-align: center;
-    // max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+// page-header 样式已由全局样式统一处理
 
 .vision-section,
 .work-content-section {
