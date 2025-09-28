@@ -222,6 +222,30 @@ onMounted(async () => {
         />
       </div>
     </el-dialog>
+    
+    <!-- 自定义页脚 -->
+    <footer class="projects-footer">
+      <!-- SVG Logo -->
+      <div class="footer-logo">
+        <img src="../assets/images/base/footlogo.svg" alt="EIT Logo" />
+      </div>
+      
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-section-title">
+            <h3>联系我们</h3>
+          </div>
+          <div class="footer-section-content">
+            <p>邮箱：xyshen@eitech.edu.cn</p>
+            <p>|</p>
+            <p>地址：浙江省宁波市镇海区庄市街道同心路568号</p>
+            <p>|</p>
+            <p>Built with Lab Website Template</p>
+          </div>
+        </div>
+      </div>
+
+    </footer>
   </div>
 </template>
 
@@ -748,6 +772,166 @@ onMounted(async () => {
   
   .container-content {
     padding: 15px;
+  }
+}
+
+// 自定义页脚样式
+.projects-footer {
+  position: relative;
+  width: 100%;
+  height: 593px;
+  color: white;
+  margin-top: 80px;
+  overflow: hidden;
+  font-family: "PingFang SC", sans-serif;
+  
+  // 背景层
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(3, 13, 38, 1) 0%, rgba(36, 6, 76, 1) 100%);
+    z-index: 1;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('@/assets/images/base/footer-image-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  // Logo
+  .footer-logo {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 1500px;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      filter: brightness(0) invert(1);
+    }
+  }
+  
+  // 内容区域
+  .footer-content {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    z-index: 3;
+    
+    .footer-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+      .footer-section-title h3 {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 45px;
+        letter-spacing: 0;
+        text-align: center;
+        margin-bottom: 50px;
+        color: #fff;
+      }
+      
+      .footer-section-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        flex-wrap: wrap;
+      }
+      
+      p {
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 45px;
+        letter-spacing: 0;
+        margin: 0;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .projects-footer {
+    height: 500px;
+    margin-top: 60px;
+    
+    .footer-logo {
+      width: 150px;
+    }
+    
+    .footer-content {
+      padding: 0 15px;
+      
+      .footer-section {
+        .footer-section-title h3 {
+          font-size: 1.1rem;
+        }
+        
+        .footer-section-content {
+          gap: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-footer {
+    height: 450px;
+    
+    .footer-logo {
+      width: 120px;
+    }
+    
+    .footer-content {
+      .footer-section {
+        .footer-section-title h3 {
+          font-size: 1rem;
+        }
+        
+        .footer-section-content {
+          gap: 20px;
+        }
+        
+        p {
+          font-size: 13px;
+        }
+      }
+    }
   }
 }
 </style>
