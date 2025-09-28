@@ -141,47 +141,7 @@
   padding: 2rem;
 }
 
-h1 {
-  margin: 40px 0;
-  font-family: "Barlow", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 1px;
-  line-height: 1.4;
-  color: var(--text);
-  
-  i {
-    margin-right: 0.5rem;
-    color: var(--primary);
-  }
-}
-
-h2 {
-  font-family: "Barlow", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: left;
-  letter-spacing: 1px;
-  line-height: 1.4;
-  margin: 20px 0 20px 0;
-  padding-bottom: 5px;
-  border-bottom: solid 1px var(--light-gray, #e0e0e0);
-  color: var(--text);
-}
-
-h3 {
-  font-family: "Barlow", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-align: left;
-  letter-spacing: 1px;
-  line-height: 1.4;
-  margin: 0px 0 20px 0;
-  color: var(--text);
-}
+// 全局样式已统一，这里只保留页面特定的样式
 
 .intro {
   font-size: 16px;
@@ -210,22 +170,14 @@ section {
   }
 }
 
-ul {
-  margin: 1rem 0;
-  padding-left: 1.5rem;
-  
-  li {
-    font-size: 16px;
-    line-height: 32px;
-    margin-bottom: 0.8rem;
-    color: var(--text);
-    text-align: justify;
-  }
-}
+// ul 和 li 样式已由全局样式统一处理
 .pi-section {
   // text-align: center;
   margin-bottom: 0px;
-  
+  h3{
+    margin-top: 0px;
+  }
+
   p {
     font-size: 16px;
     line-height: 1.8;
@@ -276,17 +228,5 @@ ul {
     }
   }
 }
-p{
-  line-height: 28px !important;
-  text-align: justify !important;
-  font-family: Barlow, sans-serif !important;
-}
-li{
-  line-height: 28px !important;
-  text-align: justify !important;
-  font-family: 'Barlow', sans-serif !important;
-  list-style-type: square !important;
-  font-size: 14px !important;
-  font-weight: 400 !important;
-}
+// 全局样式已统一处理 p 和 li 标签
 </style>

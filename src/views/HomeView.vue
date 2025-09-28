@@ -119,9 +119,7 @@ onMounted(async () => {
   margin: 0 auto;
   padding: 2rem;
 }
-* {
-  font-family: "PingFang SC";
-}
+// 全局字体样式已统一
 section {
   margin-bottom: 4rem;
   
@@ -130,46 +128,7 @@ section {
   }
 }
 
-h1 {
-  font-size: 24px;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: var(--text);
-  font-weight: 600;
-  line-height: 33.6px;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--text);
-  font-weight: 600;
-  line-height: 1.3;
-  border-bottom: 1px solid #e0e0e0;
-  margin:20px 0px 20px 0px;
-}
-
-p {
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 400;
-  color: var(--text);
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0;
-  text-align: justify;
-  
-  a {
-    color: var(--primary);
-    text-decoration: none;
-    
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
+// 全局样式已统一处理 h1, h2, p 标签
 
 .hero-section {
   width: 100%;
@@ -182,27 +141,6 @@ p {
   margin-left: 0px;
   margin-right: 0px;
   margin-bottom: 100px;
-  
-  h1 {
-    margin: 40px 0;
-    font-family: "Barlow", sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 1.4;
-  }
-  
-  p {
-    font-size: 16px;
-    line-height: 32px;
-    text-align: justify;
-    margin: 20px 0;
-    max-width: 1140px;
-    // margin-left: auto;
-    // margin-right: auto;
-  }
 }
 
 .news-section {
@@ -214,7 +152,7 @@ p {
   padding-top: 10px;
   padding-left: 0px;
   padding-right: 0px;
-  font-family: "PingFang SC";
+  // font-family: "PingFang SC";
   // padding: 20px;
   .news-section-title {
     font-family: "Barlow", sans-serif;
@@ -255,13 +193,13 @@ p {
 .about-section {
   padding: 1rem 0;
   
-  p {
-    margin: 20px 0;
-    text-align: justify;
-    line-height: 24px;
-    font-weight: 400;
-    font-family: "PingFang SC";
-  }
+  // p {
+  //   margin: 20px 0;
+  //   text-align: justify;
+  //   line-height: 24px;
+  //   font-weight: 400;
+  //   font-family: "PingFang SC";
+  // }
   
   img {
     border-radius: var(--rounded);

@@ -148,27 +148,6 @@ onMounted(async () => {
 .page-header {
   text-align: center;
   margin-bottom: 3rem;
-  
-  h1 {
-    margin: 40px 0;
-    font-family: "Barlow", sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 1.4;
-    color: var(--text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    
-    i {
-      color: var(--primary);
-    }
-  }
-  
   .page-description {
     font-size: 16px;
     line-height: 32px;
@@ -191,21 +170,6 @@ onMounted(async () => {
 // 重点论文区域
 .highlighted-section {
   margin-bottom: 3rem;
-  
-  h2 {
-    font-family: "Barlow", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 1.4;
-    margin: 40px 0 20px 0;
-    padding-bottom: 5px;
-    border-bottom: solid 1px var(--light-gray, #e0e0e0);
-    color: var(--text);
-  }
-  
   .highlighted-papers {
     display: flex;
     flex-direction: column;
@@ -214,21 +178,6 @@ onMounted(async () => {
 }
 
 // 全部论文区域
-.all-papers-section {
-  h2 {
-    font-family: "Barlow", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 1.4;
-    margin: 40px 0 20px 0;
-    padding-bottom: 5px;
-    border-bottom: solid 1px var(--light-gray, #e0e0e0);
-    color: var(--text);
-  }
-}
 
 // 搜索框
 .search-box {

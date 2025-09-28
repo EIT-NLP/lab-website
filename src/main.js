@@ -11,7 +11,7 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
 // Import global styles
-import './assets/styles/main.scss'
+import './assets/styles/base/main.scss'
 
 const app = createApp(App)
 
