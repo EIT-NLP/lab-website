@@ -1,12 +1,12 @@
 <template>
   <div class="hiring-page">
-    <section class="hero-section">
+    <div class="page-header">
       <h1><i class="fa-solid fa-briefcase"></i> 加入我们</h1>
       
       <p>
         课题组专注培养具有科学精神的创新创业顶级人才，提供优越的科研条件、优厚的薪资待遇、广阔的发展空间、多样化的国际学术交流以及与知名企业交流合作的机会。现诚邀国内外具有相关研究背景的青年才俊、优秀学者或交换生加盟。
       </p>
-    </section>
+    </div>
 
     <section class="vision-section">
       <h2>实验室愿景</h2>
@@ -132,33 +132,7 @@ section {
 
 // 全局样式已统一处理 h1, h2, h3, h4, p, ul, ol, li 标签
 
-.hero-section {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 0 0 0 0;
-  margin-bottom: 2rem;
-  
-  h1 {
-    font-size: 24px;
-    // margin-bottom: 1rem;
-    text-align: center;
-    color: var(--text);
-    font-weight: 400;
-    line-height: 36px;
-  }
-  
-  p {
-    margin: 20px 0 20px 0;
-    font-size: 16px;
-    line-height: 32px;
-    text-align: justify;
-    // text-align: center;
-    // max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+// page-header 样式已由全局样式统一处理
 
 .vision-section,
 .work-content-section {

@@ -144,21 +144,7 @@ onMounted(async () => {
   padding: 2rem;
 }
 
-// 页面头部
-.page-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  .page-description {
-    font-size: 16px;
-    line-height: 32px;
-    text-align: justify;
-    // margin-bottom: 1rem;
-    text-align: center;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+// page-header 样式已由全局样式统一处理
 
 // 章节分隔符
 .section-break {

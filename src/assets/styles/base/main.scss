@@ -1,6 +1,9 @@
 // Import global typography styles first
 @import "typography";
 
+// Import page header styles
+@import "page-header";
+
 // Import all styles from Jekyll project
 @import "../anchor";
 @import "../background";

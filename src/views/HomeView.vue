@@ -1,12 +1,12 @@
 <template>
   <div class="home-page">
-    <section class="hero-section">
+    <div class="page-header">
       <h1>宁波东方理工大学自然语言处理课题组</h1>
       
       <p>
         我们是<a href="https://www.eitech.edu.cn/" target="_blank">宁波东方理工大学</a>自然语言处理课题组（EIT-NLP）。依托的宁波东方理工大学，坐落于孕育过王阳明、黄宗羲等思想大家与屠呦呦等科学大师的宁波 —— 这座东南沿海的港口名城与历史文化之城。学校以 "服务国家发展、推动社会进步" 为使命，是一所社会力量举办、省市共同建设、国家重点支持的高起点、小而精、创新型、国际化的新型研究型大学。
       </p>
-    </section>
+    </div>
 
     <section class="news-section">
       <h2 class="news-section-title">新闻</h2>
@@ -130,18 +130,7 @@ section {
 
 // 全局样式已统一处理 h1, h2, p 标签
 
-.hero-section {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  // padding: 2rem 0;
-  padding-top: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 100px;
-}
+// page-header 样式已由全局样式统一处理
 
 .news-section {
   background: var(--background-alt);
