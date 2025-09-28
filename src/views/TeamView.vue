@@ -3,8 +3,10 @@
     <h1><i class="fa-solid fa-users"></i> 我们的团队</h1>
     
     <p class="intro">
-      我们是一支充满活力的团队，由沈晓宇领衔，团队构成涵盖科研与产品两大板块，
-      成员包括博士后、博士、工程师及实习生。我们始终致力于两方面的核心工作：一是研发创新算法，让机器实现对人类语言的深度理解、精准生成与逻辑推理；二是推动 AI 技术在服务细分领域的落地应用，呼应学校 "强化基础研究、聚焦前沿交叉" 的学科导向。
+      我们是一支充满活力的团队，由沈晓宇领衔，团队构成涵盖科研与产品两大板块，成员包括博士后、博士、工程师及实习生。
+    </p>
+    <p class="intro">
+      我们始终致力于两方面的核心工作：一是研发创新算法，让机器实现对人类语言的深度理解、精准生成与逻辑推理；二是推动 AI 技术在服务细分领域的落地应用，呼应学校 "强化基础研究、聚焦前沿交叉" 的学科导向。
     </p>
     
     <p class="intro">
@@ -177,7 +179,7 @@ h3 {
   text-align: left;
   letter-spacing: 1px;
   line-height: 1.4;
-  margin: 40px 0 20px 0;
+  margin: 0px 0 20px 0;
   color: var(--text);
 }
 
@@ -233,6 +235,9 @@ ul {
 
 .members-section {
   margin-top: 0px;
+  h2{
+    margin-top: 0px;
+  }
 }
 .join-section {
   text-align: center;
@@ -270,5 +275,18 @@ ul {
       }
     }
   }
+}
+p{
+  line-height: 28px !important;
+  text-align: justify !important;
+  font-family: Barlow, sans-serif !important;
+}
+li{
+  line-height: 28px !important;
+  text-align: justify !important;
+  font-family: 'Barlow', sans-serif !important;
+  list-style-type: square !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
 }
 </style>
