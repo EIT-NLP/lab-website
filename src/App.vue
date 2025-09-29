@@ -1,19 +1,31 @@
 <template>
   <div id="app" :data-dark="isDark">
-    <AppHeader />
+    <AppHeader v-if="!shouldHideHeader" />
     <main>
       <router-view />
     </main>
-    <AppFooter />
+    <AppFooter v-if="!shouldHideFooter" />
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
+import { useRoute } from 'vue-router'
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 
 const isDark = ref(false)
+const route = useRoute()
+
+// 检查当前路由是否需要隐藏页脚
+const shouldHideFooter = computed(() => {
+  return route.meta.hideFooter === true
+})
+
+// 检查当前路由是否需要隐藏页眉
+const shouldHideHeader = computed(() => {
+  return route.meta.hideHeader === true
+})
 
 onMounted(() => {
   // Check for saved theme preference or default to light mode

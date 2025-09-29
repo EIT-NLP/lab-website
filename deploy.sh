@@ -1,42 +1,49 @@
 #!/bin/bash
 
-# Vue项目部署脚本
-# 类似于Jekyll的deploy.sh
+# 部署脚本
+set -e
 
-echo "开始构建Vue项目..."
+echo "🚀 开始部署 Lab Website..."
 
-# 清理之前的构建
-if [ -d "dist" ]; then
-    echo "清理之前的构建文件..."
-    rm -rf dist
-fi
-
-# 安装依赖（如果需要）
-if [ ! -d "node_modules" ]; then
-    echo "安装依赖..."
-    npm install
-fi
-
-# 构建项目
-echo "构建生产版本..."
-npm run build:prod
-
-# 检查构建是否成功
-if [ $? -eq 0 ]; then
-    echo "✅ 构建成功！"
-    echo "📁 构建文件位于: dist/"
-    echo "🌐 可以通过以下命令预览:"
-    echo "   npm run serve"
-    echo ""
-    echo "📋 构建文件结构:"
-    ls -la dist/
-else
-    echo "❌ 构建失败！"
+# 检查Docker是否运行
+if ! docker info > /dev/null 2>&1; then
+    echo "❌ Docker未运行，请先启动Docker"
     exit 1
 fi
 
-echo ""
-echo "🚀 部署说明:"
-echo "1. 将 dist/ 目录下的所有文件上传到服务器"
-echo "2. 确保服务器配置支持 /sys/ 路径"
-echo "3. 配置服务器重写规则以支持Vue Router的history模式"
+# 构建镜像
+echo "📦 构建Docker镜像..."
+docker build -t lab-website:latest .
+
+# 停止并删除旧容器
+echo "🛑 停止旧容器..."
+docker stop lab-website 2>/dev/null || true
+docker rm lab-website 2>/dev/null || true
+
+# 运行新容器
+echo "🏃 启动新容器..."
+docker run -d \
+    --name lab-website \
+    --restart unless-stopped \
+    -p 10086:80 \
+    lab-website:latest
+
+# 检查容器状态
+echo "✅ 检查部署状态..."
+sleep 3
+if docker ps | grep -q lab-website; then
+    echo "🎉 部署成功！"
+    echo "🌐 访问地址: http://localhost:10086"
+    echo "📊 容器状态:"
+    docker ps | grep lab-website
+else
+    echo "❌ 部署失败，请检查日志:"
+    docker logs lab-website
+    exit 1
+fi
+
+# 清理未使用的镜像
+echo "🧹 清理未使用的镜像..."
+docker image prune -f
+
+echo "✨ 部署完成！"
