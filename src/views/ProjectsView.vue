@@ -1152,7 +1152,7 @@ onMounted(async () => {
 .projects-footer {
   position: relative;
   width: 100%;
-  height: 593px;
+  height: 570px;
   color: white;
   margin-top: 80px;
   overflow: hidden;
@@ -1164,6 +1164,8 @@ onMounted(async () => {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(0deg, rgba(3, 13, 38, 1) 0%, rgba(36, 6, 76, 1) 100%);
@@ -1173,9 +1175,11 @@ onMounted(async () => {
   &::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 1px;
+    left: -10px;
+    right: 0;
+    bottom: 0;
+    width: 103%;
     height: 100%;
     background-image: url('@/assets/images/base/footer-image-1.png');
     background-size: cover;
